@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Image Name="ColorImageElement" HorizontalAlignment="Left" Height="234" Margin="39,36,0,0" VerticalAlignment="Top" Width="438" />
+        <StackPanel
+            HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Button Content="Take Picture" Click="TakePictureButton_Click"></Button>
+        </StackPanel>
     </Grid>
 </Window>
