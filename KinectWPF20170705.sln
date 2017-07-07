@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloKinectWPF20170705", "H
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KinectDepthImage20170707", "KinectDepthImage20170707\KinectDepthImage20170707.csproj", "{6118FDD2-418C-4D29-A65C-5FCC6FA35312}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KinectDepthImage20170707Part2", "KinectDepthImage20170707Part2\KinectDepthImage20170707Part2.csproj", "{BDC5F899-114F-43CF-A004-1839E14A3698}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,18 @@ Global
 		{6118FDD2-418C-4D29-A65C-5FCC6FA35312}.Release|x64.Build.0 = Release|Any CPU
 		{6118FDD2-418C-4D29-A65C-5FCC6FA35312}.Release|x86.ActiveCfg = Release|Any CPU
 		{6118FDD2-418C-4D29-A65C-5FCC6FA35312}.Release|x86.Build.0 = Release|Any CPU
+		{BDC5F899-114F-43CF-A004-1839E14A3698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDC5F899-114F-43CF-A004-1839E14A3698}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDC5F899-114F-43CF-A004-1839E14A3698}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BDC5F899-114F-43CF-A004-1839E14A3698}.Debug|x64.Build.0 = Debug|Any CPU
+		{BDC5F899-114F-43CF-A004-1839E14A3698}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BDC5F899-114F-43CF-A004-1839E14A3698}.Debug|x86.Build.0 = Debug|Any CPU
+		{BDC5F899-114F-43CF-A004-1839E14A3698}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDC5F899-114F-43CF-A004-1839E14A3698}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDC5F899-114F-43CF-A004-1839E14A3698}.Release|x64.ActiveCfg = Release|Any CPU
+		{BDC5F899-114F-43CF-A004-1839E14A3698}.Release|x64.Build.0 = Release|Any CPU
+		{BDC5F899-114F-43CF-A004-1839E14A3698}.Release|x86.ActiveCfg = Release|Any CPU
+		{BDC5F899-114F-43CF-A004-1839E14A3698}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

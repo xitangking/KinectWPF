@@ -5,9 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KinectDepthImage20170707"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="600" Width="1439">
     <Grid>
-        <Image Name="DepthImage" HorizontalAlignment="Left" Height="272" Margin="30,18,0,0" VerticalAlignment="Top" Width="456"/>
-
+        
+            <!--<TextBlock Name="PixelDepth" FontSize="48" HorizontalAlignment="Left" Height="100" VerticalAlignment="Bottom"/>-->
+            <Image x:Name="DepthImage"  Width="640" Height="480" Margin="740,44,51,45" ></Image>
+            <Image x:Name="EnhancedDepthImage" Width="640" Height="480" Margin="48,44,743,45" />
+        
     </Grid>
 </Window>
