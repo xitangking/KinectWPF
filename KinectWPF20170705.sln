@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KinectDepthImage20170707", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KinectDepthImage20170707Part2", "KinectDepthImage20170707Part2\KinectDepthImage20170707Part2.csproj", "{BDC5F899-114F-43CF-A004-1839E14A3698}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KinectPlayersIndex", "KinectPlayersIndex\KinectPlayersIndex.csproj", "{B3409B49-2AA2-4BE6-997F-C4B23F7E49A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{BDC5F899-114F-43CF-A004-1839E14A3698}.Release|x64.Build.0 = Release|Any CPU
 		{BDC5F899-114F-43CF-A004-1839E14A3698}.Release|x86.ActiveCfg = Release|Any CPU
 		{BDC5F899-114F-43CF-A004-1839E14A3698}.Release|x86.Build.0 = Release|Any CPU
+		{B3409B49-2AA2-4BE6-997F-C4B23F7E49A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3409B49-2AA2-4BE6-997F-C4B23F7E49A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3409B49-2AA2-4BE6-997F-C4B23F7E49A9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B3409B49-2AA2-4BE6-997F-C4B23F7E49A9}.Debug|x64.Build.0 = Debug|Any CPU
+		{B3409B49-2AA2-4BE6-997F-C4B23F7E49A9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B3409B49-2AA2-4BE6-997F-C4B23F7E49A9}.Debug|x86.Build.0 = Debug|Any CPU
+		{B3409B49-2AA2-4BE6-997F-C4B23F7E49A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3409B49-2AA2-4BE6-997F-C4B23F7E49A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3409B49-2AA2-4BE6-997F-C4B23F7E49A9}.Release|x64.ActiveCfg = Release|Any CPU
+		{B3409B49-2AA2-4BE6-997F-C4B23F7E49A9}.Release|x64.Build.0 = Release|Any CPU
+		{B3409B49-2AA2-4BE6-997F-C4B23F7E49A9}.Release|x86.ActiveCfg = Release|Any CPU
+		{B3409B49-2AA2-4BE6-997F-C4B23F7E49A9}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
