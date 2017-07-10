@@ -89,6 +89,65 @@ namespace KinectTakingMeasure
             }
         }
 
+        private void UnInitializeKinectSensor(KinectSensor kinectSensor)
+        {
+            if (kinectSensor != null)
+            {
+                kinectSensor.Stop();
+                kinectSensor.DepthFrameReady -= kinectSensor_DepthFrameReady;
+            }
+        }
+
+        
+
+        void DiscoverSencor()
+        {
+            KinectSensor.KinectSensors.StatusChanged += KinectSensors_StatusChanged;
+            Kinect = KinectSensor.KinectSensors.FirstOrDefault(x => x.Status == KinectStatus.Connected);
+        }
+
+        private void KinectSensors_StatusChanged(object sender, StatusChangedEventArgs e)
+        {
+            switch (e.Status)
+            {
+                case KinectStatus.Connected:
+                    if (Kinect == null)
+                    {
+                        Kinect = e.Sensor;
+                    }
+                    break;
+                case KinectStatus.Disconnected:
+                    if (Kinect == e.Sensor)
+                    {
+                        Kinect = null;
+                        Kinect = KinectSensor.KinectSensors.FirstOrDefault(x => x.Status == KinectStatus.Connected);
+                    }
+                    if (Kinect == null)
+                    {
+                        // TODO: 提示kinect已经拔出，插入kinect
+                    }
+                    break;
+            }
+        }
+
+        private void StopKinect()
+        {
+            if (Kinect != null)
+            {
+                if (Kinect.Status == KinectStatus.Connected)
+                {
+                    Kinect.Stop();
+                }
+            }
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            StopKinect();
+        }
+
+        #endregion
+
         private void CalculatePlayerSize(DepthImageFrame frame, short[] depthPixelData)
         {
             int depth;
@@ -112,7 +171,7 @@ namespace KinectTakingMeasure
                         {
                             if (players[playerIndex] == null)
                             {
-                                players[playerIndex] = new PlayerDepthData(playerIndex + 1, frame.Width,frame.Height);
+                                players[playerIndex] = new PlayerDepthData(playerIndex + 1, frame.Width, frame.Height);
                             }
 
                             players[playerIndex].UpdateData(col, row, depth);
@@ -156,65 +215,7 @@ namespace KinectTakingMeasure
                 PixelFormats.Bgr32, null, enhPixelData, depthFrame.Width * bytePerPixel);
         }
 
-
-        private void UnInitializeKinectSensor(KinectSensor kinectSensor)
-        {
-            if (kinectSensor != null)
-            {
-                kinectSensor.Stop();
-                kinectSensor.DepthFrameReady -= kinectSensor_DepthFrameReady;
-            }
-        }
-
         
-
-        void DiscoverSencor()
-        {
-            KinectSensor.KinectSensors.StatusChanged += KinectSensors_StatusChanged;
-            Kinect = KinectSensor.KinectSensors.FirstOrDefault(x => x.Status == KinectStatus.Connected);
-        }
-
-        private void StopKinect()
-        {
-            if (Kinect != null)
-            {
-                if (Kinect.Status == KinectStatus.Connected)
-                {
-                    Kinect.Stop();
-                }
-            }
-        }
-
-        private void Window_Closed(object sender, EventArgs e)
-        {
-            StopKinect();
-        }
-
-        #endregion
-
-        private void KinectSensors_StatusChanged(object sender, StatusChangedEventArgs e)
-        {
-            switch (e.Status)
-            {
-                case KinectStatus.Connected:
-                    if (Kinect == null)
-                    {
-                        Kinect = e.Sensor;
-                    }
-                    break;
-                case KinectStatus.Disconnected:
-                    if (Kinect == e.Sensor)
-                    {
-                        Kinect = null;
-                        Kinect = KinectSensor.KinectSensors.FirstOrDefault(x => x.Status == KinectStatus.Connected);
-                    }
-                    if (Kinect == null)
-                    {
-                        // TODO: 提示kinect已经拔出，插入kinect
-                    }
-                    break;
-            }
-        }
 
     }
 }

@@ -40,8 +40,6 @@ namespace KinectTakingMeasure
 
         #endregion
 
-
-
         #region Methods
         public void UpdateData(int x, int y, int depth)
         {
@@ -53,7 +51,6 @@ namespace KinectTakingMeasure
             this._HiHeight = Math.Max(this._HiHeight, y);
         }
         #endregion Methods
-
 
         #region Properties
         public int PlayerId { get; private set; }
